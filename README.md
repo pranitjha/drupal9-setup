@@ -1,4 +1,4 @@
-# My Project
+# Drupal 9
 This repository consists of the drupal9.
 
 # Getting Started
@@ -7,7 +7,7 @@ This project is based on BLT 12.x with Lando local env, an open-source project t
 1. Review the [Required / Recommended Skills](https://docs.acquia.com/blt/developer/skills/) for working with a BLT project.
 2. Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](https://docs.acquia.com/blt/install/).
 
-# If Starting From Scratch 
+# If Starting From Scratch
 1. Download the latest version of Drupal
 ```
 $ composer create-project --no-interaction acquia/drupal-recommended-project drupal9
@@ -20,7 +20,7 @@ $ composer require mikemadison13/blt-lando
 ```
 
 
-3. Setup your container settings by modifying your .lando.yml file. 
+3. Setup your container settings by modifying your .lando.yml file.
 ```
 $ blt recipes:vm:lando
 ```
@@ -97,7 +97,7 @@ $ lando blt sync
 ```
 
 ---
-# To start developing every time 
+# To start developing every time
 
 1. Start clean from the upstream's integration branch
 ```
@@ -115,32 +115,32 @@ After you have forked, cloned the project and setup your blt.yml file install Co
 ```
 $ composer install
 ```
-4. Setup container 
+4. Setup container
 ```
 $ lando start
 ```
 
 5. Setup a local Drupal site
 
-There are two options to setup a local Drupal site: with a clean database, or with a copy of a database from a cloud environment. 
-   
-    1. Setup a local Drupal site with an empty database. The blt-cohesion composer package will run all necessary site studio commands. 
+There are two options to setup a local Drupal site: with a clean database, or with a copy of a database from a cloud environment.
+
+    1. Setup a local Drupal site with an empty database. The blt-cohesion composer package will run all necessary site studio commands.
 Use BLT to setup the site with configuration.
-    
+
     $ lando blt setup
 
-    
+
     or  If it is a multisite you can identify a specific site.
-    
+
 
     $ lando blt setup --site=drupal9
-    
-   
+
+
     2. Setup a local Drupal site with an existing database. If you have an existing database you can use BLT to pull down the database from your Cloud environment.
-    
+
 
     $ lando blt sync
-     
+
 
 6. Log into your site with drush.
 Access the site and do necessary work at #LOCAL_DEV_URL by running the following commands.
@@ -148,13 +148,13 @@ Access the site and do necessary work at #LOCAL_DEV_URL by running the following
 $ cd docroot
 $ lando drush uli
 ```
-    
 
 
-### To Create a Pull Request. 
 
-1. After you make changes inside your local drupal site. Export your configuration from the database to your configuration. 
- Export your drupal config changes if you have them. 
+### To Create a Pull Request.
+
+1. After you make changes inside your local drupal site. Export your configuration from the database to your configuration.
+ Export your drupal config changes if you have them.
  ```
 $ lando drush cex
 ```
@@ -163,7 +163,7 @@ To export Site studio configuration to your site studio package run the followin
 $ lando drush sync:export
 ```
 
-2. commit your changes and push your changes to your origin repository. 
+2. commit your changes and push your changes to your origin repository.
 ```
 $ git status
 $ git add -p
@@ -172,7 +172,7 @@ $ git push --set-upstream origin drupal9-000-new-site-change
 ```
 
 3. Navigate to Github and open a pull request against the upstream. Assign a person on your team to review.
-  
+
 
 
 # Resources
