@@ -1,2 +1,16 @@
 project:
   machine_name: drupal9
+  prefix: Drupal9
+  human_name: 'Drupal 9.'
+  profile:
+    name: standard
+  local: {  }
+drush:
+  aliases:
+    remote: '${drush.aliases.stg}'
+    local: self
+    ci: self
+  default_alias: self
+cm:
+  core:
+    install_from_config: true

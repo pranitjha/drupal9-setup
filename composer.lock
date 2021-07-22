@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bee813c824e1c57cd6fa29acf172a23e",
+    "content-hash": "3595aaa05ee6f4e965465cb962e938f4",
     "packages": [
         {
             "name": "acquia/blt",
@@ -8910,6 +8910,45 @@
             "time": "2020-10-01T13:52:52+00:00"
         },
         {
+            "name": "mikemadison13/blt-lando",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikemadison13/blt-lando.git",
+                "reference": "4982c932ecb7fcf1ef1dbd2781b44ace404e97b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikemadison13/blt-lando/zipball/4982c932ecb7fcf1ef1dbd2781b44ace404e97b9",
+                "reference": "4982c932ecb7fcf1ef1dbd2781b44ace404e97b9",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acquia\\BltLando\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Madison",
+                    "homepage": "https://mikemadison.net",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Lando integration for Acquia BLT.",
+            "support": {
+                "issues": "https://github.com/mikemadison13/blt-lando/issues",
+                "source": "https://github.com/mikemadison13/blt-lando/tree/main"
+            },
+            "time": "2021-07-08T16:05:54+00:00"
+        },
+        {
             "name": "mkalkbrenner/php-htmldiff-advanced",
             "version": "0.0.8",
             "source": {
@@ -13629,7 +13668,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mikemadison13/blt-lando": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
