@@ -6,6 +6,7 @@ This project is based on BLT 12.x with Lando local env, an open-source project t
 
 1. Review the [Required / Recommended Skills](https://docs.acquia.com/blt/developer/skills/) for working with a BLT project.
 2. Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](https://docs.acquia.com/blt/install/).
+3. Ensure that your computer meets the minimum installation requirements for lando and docker. See (https://docs.lando.dev/basics/installation.html)
 
 # If Starting From Scratch
 1. Download the latest version of Drupal
@@ -13,21 +14,29 @@ This project is based on BLT 12.x with Lando local env, an open-source project t
 $ composer create-project --no-interaction acquia/drupal-recommended-project drupal9
 ```
 
+2. Goto project directory
+```
+$ cd drupal9
+```
 
-2. Add the blt-lando plugin
+3. Add the blt-lando plugin
 ```
 $ composer require mikemadison13/blt-lando
 ```
 
-
-3. Setup your container settings by modifying your .lando.yml file.
+4. Setup your container settings by modifying your .lando.yml file.
 ```
 $ blt recipes:vm:lando
 ```
 
-4. Finalize settings and setup
+5. Start lando container
 ```
-$ blt setup
+$ lando start
+```
+
+6. Finalize settings and setup
+```
+$ lando blt setup
 ```
 
 Note: if you receive a failure during the install related to the database, please check the docroot/sites/default/settings/local.settings.php file to ensure that the proper credentials are in the database array. This is a very common problem with Lando!
